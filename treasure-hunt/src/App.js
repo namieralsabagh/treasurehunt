@@ -8,6 +8,7 @@ const App = () => {
   const [board, setBoard] = useState(["?", "?", "?", "?", "?", "?", "?", "?", "?"])
   const [winSquare, setWinSquare] = useState(Math.floor(Math.random() * board.length))
   const [loseSquare, setLoseSquare] = useState(Math.floor(Math.random() * board.length))
+  const [anySquare, setAnySquare] = useState(Math.floor(Math.random() * board.length))
   
 
 
@@ -29,6 +30,11 @@ const App = () => {
     newBoard[loseSquare] = "💣"
     setBoard(newBoard)
     alert("You Lose")
+    }else{
+    let newBoard = [...board]
+    newBoard[anySquare] = "🌴"
+    setBoard(newBoard)
+    
 }
 }
     
